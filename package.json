@@ -1,0 +1,30 @@
+{
+  "name": "example-server",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "npm run generate",
+    "build": "turbo run build",
+    "generate": "turbo run generate",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "rimraf": "^4.1.2",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "npm@9.2.0",
+  "dependencies": {
+    "react-query": "^3.39.3"
+  }
+}
